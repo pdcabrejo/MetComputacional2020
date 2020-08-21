@@ -1,0 +1,22 @@
+-------------------------------------------------------
+Compresion 	          	Descompresion
+------------------------------------------------------- 
+
+#######################################################
+Formato zip
+zip -r output.zip *.*		unzip -v ouput.zip
+#######################################################
+Formato rar
+rar a output.rar *.*		unrar x output.rar
+#######################################################
+Empaquetar con zip
+tar zcvf output.tar.gz *.*	tar zxvf output.tar.gz
+#######################################################
+Empaquetar con bzip2
+tar jcvf output.tar.bz2 *.*	tar jxvf output.tar.bz2
+#######################################################
+Opcional de empaquetamiento .tar.gz
+tar cvf output.tar *.*
+gzip output.tar			gunzip output.tar.gz
+#######################################################
+    
