@@ -1,7 +1,7 @@
 # Métodos Computacionales - 2020-2
 
 ### Entornos de programación académica en línea:
-* [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/asegura4488/MetodoComputacionales/master)
+* [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/asegura4488/MetComputacional2020/master)
 * Azure cloud service de [Uniandes ![Uniandes](imagenes/andes_32px.png)](http://facciencias.az.uniandes.edu.co/jhub/)
 
 ## Material del curso Métodos Computacionales de Uniandes
