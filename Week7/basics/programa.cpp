@@ -24,13 +24,13 @@ int main(){
  float x = 0.;
  float y = 0.;
 
- float r = 3.0;
+ float r = 1.0;
  
  srand48(0.);
 
  StartAnim();
 
- for (i = 1; i < 5; i++){
+ for (i = 1; i < 1E6; i++){
     theta = drand48()*2.0*pi;
 
     x += cos(theta);
@@ -54,7 +54,7 @@ void StartAnim(){
 	std::cout <<"set size ratio -1"<<std::endl;
 	std::cout <<"set parametric"<<std::endl;
 	std::cout <<"set trange [0:7]"<<std::endl;
-	std::cout <<"set isosamples 10"<<std::endl;
+	std::cout <<"set isosamples 24"<<std::endl;
 
 }
 
