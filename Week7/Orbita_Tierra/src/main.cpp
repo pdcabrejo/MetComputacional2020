@@ -54,10 +54,12 @@ int main(int argc, char *argv[]){
  Size = int(Size/deltat);
 
 
- double x0 = 1; // au
+// double x0 = 1; // au
+ double x0 = 1.665861; // au
  double y0 = 0;
  double vx0 = 0.;
- double vy0 = 0.01721420632; // au/dias
+// double vy0 = 0.01721420632; // au/dias
+ double vy0 = 0.010694857; // au/dias
  double ax = 0.;
  double ay = 0.; 
 
