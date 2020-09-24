@@ -1,12 +1,12 @@
 void StartAnim(){
 
   std::cout<<"unset key"<<std::endl;
-  std::cout<<"set xrange [-2:2]"<<std::endl;
-  std::cout<<"set yrange [-2:2]"<<std::endl;
+ // std::cout<<"set xrange [-2:2]"<<std::endl;
+ // std::cout<<"set yrange [-2:2]"<<std::endl;
   std::cout<<"set size ratio -1"<<std::endl;
   std::cout<<"set parametric"<<std::endl;
-  std::cout<<"set trange [0:7]"<<std::endl;
-  std::cout<<"set isosamples 24"<<std::endl;
+  std::cout<<"set trange [0:15]"<<std::endl;
+  std::cout<<"set isosamples 30"<<std::endl;
 
 }
 

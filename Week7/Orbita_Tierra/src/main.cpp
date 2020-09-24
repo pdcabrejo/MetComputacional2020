@@ -49,7 +49,7 @@ int main(int argc, char *argv[]){
  int Size = 365*std::stoi(argv[1]);
  
  double t = 0.;
- double deltat = 0.5;
+ double deltat = 1.;
 
  Size = int(Size/deltat);
 
@@ -74,6 +74,9 @@ int main(int argc, char *argv[]){
  double *Vy = new double[Size]; 
 
  double *time = new double[Size];
+ double *Energy = new double[Size];
+
+ Energy[0] = 0.5*( pow(vx0, 2) + pow(vy0, 2) ); //- G/GetDis(x0,y0) ; 
 
  // Llenemos las primeras posiones
  
@@ -99,6 +102,8 @@ int main(int argc, char *argv[]){
 	Vx[i-1] = GetVel(X[i],X[i-2], deltat);
 	Vy[i-1] = GetVel(Y[i],Y[i-2], deltat);
 
+        Energy[i-1] = 0.5*( pow(Vx[i-1], 2) + pow(Vy[i-1], 2) ); //- G/GetDis(X[i-1],Y[i-1]) ; 
+
 	time[i-1] = t;
 
 	t += deltat;
@@ -108,7 +113,7 @@ int main(int argc, char *argv[]){
  }
 
   // Generando la animacion
- StartAnim();
+// StartAnim();
  double rsun = 0.4;
  double rearth = 0.1;
  double Xsun[1] = {0.};
@@ -116,10 +121,12 @@ int main(int argc, char *argv[]){
 
  for (int i = 0; i < Size; i++){
  
-	 StartCuadro();
-	 GetPoint(Xsun[0],Ysun[0],rsun);
-	 GetPoint(X[i],Y[i],rearth);
-	 EndCuadro();
+	 //StartCuadro();
+	 //GetPoint(Xsun[0],Ysun[0],rsun);
+	 //GetPoint(X[i],Y[i],rearth);
+	 std::cout << time[i] << " " << Energy[i] << std::endl;
+	 //GetPoint(time[i], Energy[i], 0.2);
+	 //EndCuadro();
 
  
  }
