@@ -78,34 +78,39 @@ int main(int argc, char *argv[]){
 	Energy[i] =  0.5*( pow(Vx[i],2) + pow(Vy[i],2) ) - G/sqrt(pow(X[i],2)+pow(Y[i],2)) ;
  }
 
- std::ofstream *File = new std::ofstream[1];
- File[0].open("Energia.dat",std::ofstream::trunc);
+ std::ofstream *File = new std::ofstream[2];
+ File[0].open("data/Energy.dat",std::ofstream::trunc);
+ File[1].open("data/Trayectory.dat",std::ofstream::trunc);
+
 
 
   // Generando la animacion
-// StartAnim();
- double rsun = 0.4;
- double rearth = 0.1;
+
+ StartAnim();
+ double rsun = 0.2;
+ double rearth = 0.15;
  double Xsun[1] = {0.};
  double Ysun[1] = {0.};
 
  for (int i = 1; i < Size-1; i++){
  
-	 //StartCuadro();
-	 //GetPoint(Xsun[0],Ysun[0],rsun);
-	 //GetPoint(X[i],Y[i],rearth);
-//" " << Vx[i] << " " <<Vy[i]<< " " << X[i] << " " << Y[i] <<std::endl;
-	 //GetPoint(time[i], Energy[i], 0.2);
-	 //EndCuadro();
+	 StartCuadro();
+	 GetPoint(Xsun[0],Ysun[0],rsun);
+	 GetPoint(X[i],Y[i],rearth);
+	 EndCuadro();
 
-      File[0] << time[i] << " " << Energy[i] << std::endl;
- }
+      	 File[0] << time[i] << " " << Energy[i] << std::endl;
+	 File[1] << X[i] << " " << Y[i] << std::endl;
+  }
 
-//std::cout << Energy[1]; 
 
 
  delete[] X;
  delete[] Y;
+ delete[] Vx;
+ delete[] Vy;
+ delete[] Energy;
+ delete[] time;
 
 
  return 0;
