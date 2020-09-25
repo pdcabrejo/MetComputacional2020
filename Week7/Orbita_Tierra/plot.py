@@ -2,12 +2,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 import os
 
-a = os.system("./Orbita 3 > marte.dat")
+a = os.system("./Orbita 2")
 
-data = np.loadtxt("marte.dat")
+data = np.loadtxt("Energia.dat")
 x = data[:,0]
 y = data[:,1]
 
 plt.plot(x,y)
+#plt.ylim(0.,1.)
 plt.show()
 
