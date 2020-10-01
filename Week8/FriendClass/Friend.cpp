@@ -14,6 +14,7 @@ private:
 
    double x;
    double y;
+
 };
 
 
